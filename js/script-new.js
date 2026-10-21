@@ -38,7 +38,7 @@ const warnaKategori = {
   mewah: "bg-gray-900",
   reguler: "bg-blue-500",
   minibus: "bg-emerald-600",
-//   "big-bus": "bg-purple-600",
+  "bus": "bg-purple-600",
 //   "medium-bus": "bg-indigo-600",
 //   elf: "bg-amber-600",
 };
@@ -97,16 +97,16 @@ function renderArmada(data) {
                    border-t border-gray-100 pt-4"
           >
             <span class="text-sm text-gray-500">
-              <i class="${mobil.icon} mr-1 text-gray-600"></i>
+              <i class="${mobil.icon} mr-1 text-red-600"></i>
               ${mobil.fasilitas}
             </span>
 
             <button
               type="button"
               data-rent-id="${mobil.id}"
-              class="shrink-0 rounded-lg bg-gray-600 px-4 py-2.5
+              class="shrink-0 rounded-lg bg-red-600 px-4 py-2.5
                      text-sm font-semibold text-white
-                     transition hover:bg-gray-700"
+                     transition hover:bg-red-700"
             >
               Sewa Sekarang
             </button>
@@ -153,9 +153,9 @@ fleetFilters.forEach((button) => {
     fleetFilters.forEach((filter) => {
       const aktif = filter === button;
 
-      filter.classList.toggle("bg-blue-500", aktif);
+      filter.classList.toggle("bg-red-500", aktif);
       filter.classList.toggle("text-white", aktif);
-      filter.classList.toggle("border-blue-500", aktif);
+      filter.classList.toggle("border-red-500", aktif);
 
       filter.classList.toggle("bg-white", !aktif);
       filter.classList.toggle("text-gray-700", !aktif);
