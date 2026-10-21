@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Indonesia Luxury RentCar melayani rental mobil untuk perjalanan bisnis, wisata, antar-jemput bandara, acara pernikahan, dan kebutuhan rombongan. Hubungi kami untuk informasi armada dan pemesanan."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Indonesia Luxury RentCar" />
+    <meta name="theme-color" content="#4b5563" />
+
+    <title>Rental Mobil Indonesia | Indonesia Luxury RentCar</title>
+
+    <!-- Canonical: pastikan URL ini sama dengan domain utama yang digunakan -->
+    <link rel="canonical" href="https://www.indonesialuxuryrentcar.com/" />
+
+    <!-- Open Graph untuk pratinjau saat dibagikan -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:site_name" content="Indonesia Luxury RentCar" />
+    <meta property="og:title" content="Rental Mobil Indonesia | Indonesia Luxury RentCar" />
+    <meta property="og:description" content="Layanan rental mobil untuk perjalanan bisnis, wisata, antar-jemput bandara, acara pernikahan, dan kebutuhan rombongan." />
+    <meta property="og:url" content="https://www.indonesialuxuryrentcar.com/" />
+    <meta property="og:image" content="https://www.indonesialuxuryrentcar.com/img/bg-new4.png" />
+    <meta property="og:image:alt" content="Layanan Indonesia Luxury RentCar" />
+
+    <!-- Twitter/X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rental Mobil Indonesia | Indonesia Luxury RentCar" />
+    <meta name="twitter:description" content="Layanan rental mobil untuk wisata, bisnis, acara khusus, dan perjalanan rombongan." />
+    <meta name="twitter:image" content="https://www.indonesialuxuryrentcar.com/img/bg-new4.png" />
+
+    <link rel="icon" type="image/png" href="img/logo-new.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+    <!-- Structured data: perbarui bila alamat, layanan, atau nomor kontak berubah -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CarRental",
+      "name": "Indonesia Luxury RentCar",
+      "url": "https://www.indonesialuxuryrentcar.com/",
+      "logo": "https://www.indonesialuxuryrentcar.com/img/logo-new.png",
+      "image": "https://www.indonesialuxuryrentcar.com/img/bg-new4.png",
+      "description": "Layanan rental mobil untuk perjalanan bisnis, wisata, antar-jemput bandara, acara pernikahan, dan kebutuhan rombongan.",
+      "telephone": "+6287701355888",
+      "email": "indonesialuxuryrentcar@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. H. Syukur VII No. 6, Sedati Gede",
+        "addressLocality": "Sedati",
+        "addressRegion": "Jawa Timur",
+        "postalCode": "61256",
+        "addressCountry": "ID"
+      },
+      "sameAs": [
+        "https://www.facebook.com/bagoes.rend",
+        "https://www.tiktok.com/@indonesialuxurytrans1980"
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .hero-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.48)), url("img/bg-new4.png");
+        background-position: center;
+        background-size: cover;
+      }
+      .shadow-card {
+        box-shadow: 0 2px 9px rgba(0, 0, 0, 0.23);
+      }
+      .car-track {
+        scrollbar-width: none;
+      }
+      .car-track::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-800">
+    <!-- Navbar -->
+    <header class="absolute inset-x-0 top-0 z-30 text-white">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 lg:px-10">
+        <a href="#home" class="flex items-center gap-2" aria-label="Indonesia Luxury RentCar beranda">
+          <img src="img/logo-new.png" alt="Logo Indonesia Luxury RentCar" class="h-10 w-10 rounded-full object-cover" />
+          <span class="leading-tight">
+            <span class="block text-sm font-extrabold tracking-wide text-white">PT. INDONESIA LUXURY RENTCAR</span>
+            <span class="block text-[10px] font-semibold tracking-widest text-white">INDONESIA LUXURY RENTCAR</span>
+          </span>
+        </a>
+
+        <button type="button"
+          id="menuButton"
+          class="rounded border border-white/40 px-3 py-2 md:hidden"
+          aria-label="Buka menu"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div
+          id="navMenu"
+          class="absolute left-0 right-0 top-full hidden flex-col gap-1 px-5 py-4 text-sm font-semibold md:static md:flex md:flex-row md:items-center md:gap-8 md:bg-rentcarparent md:p-0"
+        >
+          <a class="nav-link py-2 text-gray-400 hover:text-gray-300" href="#home">HOME</a>
+          <a class="nav-link py-2 hover:text-gray-300" href="#tentang">TENTANG KAMI</a>
+          <a class="nav-link py-2 hover:text-gray-300" href="#layanan">SERVICE</a>
+          <a class="nav-link py-2 hover:text-gray-300" href="#contact">CONTACT</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="home" class="hero-bg flex min-h-screen items-center justify-center px-5 pt-20 text-center text-white">
+      <div class="max-w-xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[.25em] text-gray-300">Indonesia Luxury RentCar</p>
+        <h1 class="text-2xl font-extrabold leading-snug drop-shadow md:text-4xl">
+          Rental Mobil Indonesia<br />
+          Nyaman untuk Setiap Perjalanan
+        </h1>
+        <p class="mx-auto mt-5 max-w-lg text-sm leading-6 text-white/85">
+          Pilihan rental mobil untuk perjalanan pribadi, kebutuhan bisnis, wisata, antar-jemput bandara, dan acara
+          keluarga. Pilih armada yang sesuai dengan kebutuhan perjalanan Anda.
+        </p>
+        <a
+          href="#layanan"
+          class="mt-6 inline-flex items-center gap-2 bg-gray-600 px-6 py-3 text-sm font-bold tracking-wide rentcarition hover:bg-gray-700"
+        >
+          LIHAT LAYANAN <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+      <!-- Tentang + video -->
+      <section id="tentang" class="mx-auto grid max-w-6xl gap-9 px-5 py-12 md:grid-cols-2 md:px-8">
+        <div class="text-center">
+          <h2 class="mb-4 text-xl font-bold">Tentang Layanan Rental Mobil Kami</h2>
+          <p class="text-sm leading-7 text-slate-600">
+            <strong class="text-slate-800">Indonesia Luxury RentCar</strong> menyediakan layanan rental mobil untuk
+            berbagai kebutuhan perjalanan, mulai dari aktivitas harian, perjalanan bisnis, wisata, hingga acara khusus.
+            Tersedia pilihan armada mulai dari mobil reguler, mobil premium, hingga kendaraan untuk rombongan.
+          </p>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Pilih kendaraan sesuai jumlah penumpang dan tujuan perjalanan Anda. Hubungi tim kami untuk menanyakan harga
+            sewa, pilihan layanan, serta ketersediaan armada pada tanggal yang diinginkan.
+          </p>
+        </div>
+
+        <!-- Menampilkan video YouTube -->
+        <div class="mx-auto w-full max-w-xl overflow-hidden rounded-xl shadow-md">
+          <div class="relative aspect-video w-full">
+            <iframe
+              class="absolute inset-0 h-full w-full"
+              src="https://www.youtube.com/embed/9PxIGmtAP2c?si=onlr2hoxyGCnXBR7"
+              title="Video profil Indonesia Luxury RentCar"
+              loading="lazy"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <!-- Paket Bromo Sunrise -->
+          <div class="mt-5 rounded-xl border border-orange-100 bg-orange-50 p-5">
+            <h3 class="mb-2 text-lg font-bold text-slate-800">Paket Bromo Sunrise</h3>
+
+            <p class="mb-4 text-sm leading-6 text-slate-600">
+              Nikmati pengalaman melihat matahari terbit di Gunung Bromo dengan perjalanan yang nyaman dari Indonesia.
+            </p>
+
+            <ul class="mb-5 space-y-2 text-sm text-slate-700">
+              <li class="flex items-start gap-2">
+                <span class="text-gray-500">✓</span>
+                Start dari Indonesia
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gray-500">✓</span>
+                Mobil dan sopir
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gray-500">✓</span>
+                BBM
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gray-500">✓</span>
+                Tiket masuk 4 titik spot
+              </li>
+            </ul>
+
+            <a
+              href="https://wa.me/6287701355888?text=Halo%20Indonesia%20Luxury%20RentCar%2C%20saya%20ingin%20memesan%20Paket%20Bromo%20Sunrise."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-gray-500 px-5 py-3 text-sm font-semibold text-white rentcarition hover:bg-gray-600"
+            >
+              Pesan Sekarang
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Layanan cards -->
+      <section id="layanan" class="mx-auto max-w-6xl px-5 py-8 md:px-8">
+        <div class="grid gap-8 md:grid-cols-2">
+          <article class="text-center">
+            <img
+              class="h-64 w-full object-cover md:h-80"
+              src="img/alphard-weding.png"
+              alt="Mobil untuk wedding dan acara khusus"
+              loading="lazy"
+            />
+            <h3 class="mt-5 text-lg font-bold">Rental Mobil untuk Acara</h3>
+            <p class="mt-2 text-sm text-slate-500">
+              Pilihan kendaraan untuk pernikahan, acara keluarga, dan momen spesial.
+            </p>
+            <a
+              href="https://wa.me/6287701355888?text=Halo%20Indonesia%20Luxury%20RentCar,%20saya%20tertarik%20untuk%20membahas%20wedding%20package."
+              target="_blank" rel="noopener noreferrer"
+              class="mt-3 inline-block bg-gray-600 px-8 py-3 text-xs font-bold tracking-widest text-white hover:bg-gray-700"
+              >TANYA PAKET</a
+            >
+          </article>
+          <article class="text-center">
+            <img
+              class="h-64 w-full object-cover md:h-80"
+              src="img/alphard-mewah.png"
+              alt="Armada mobil rental"
+              loading="lazy"
+            />
+            <h3 class="mt-5 text-lg font-bold">Mobil Reguler, Premium & Rombongan</h3>
+            <p class="mt-2 text-sm text-slate-500">Pilih armada sesuai kebutuhan perjalanan dan jumlah penumpang.</p>
+            <a
+              href="#armada"
+              class="mt-3 inline-block bg-gray-600 px-8 py-3 text-xs font-bold tracking-widest text-white hover:bg-gray-700"
+              >PILIH SEKARANG</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- Why us -->
+      <section class="mx-auto max-w-6xl px-5 py-14 md:px-8">
+        <div class="mb-8 text-center">
+          <h2 class="inline-block border-b-2 border-gray-600 px-2 pb-3 text-xl font-bold">Mengapa Memilih Kami</h2>
+        </div>
+        <div class="grid gap-5 md:grid-cols-3">
+          <article class="shadow-card p-6 text-center">
+            <i class="fa-solid fa-certificate text-4xl text-gray-600"></i>
+            <h3 class="mt-4 text-lg font-bold">Pilihan Armada Beragam</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              Pilih kendaraan sesuai kebutuhan, mulai dari mobil reguler hingga kendaraan premium dan armada rombongan.
+            </p>
+          </article>
+          <article class="shadow-card p-6 text-center">
+            <i class="fa-solid fa-id-card text-4xl text-gray-600"></i>
+            <h3 class="mt-4 text-lg font-bold">Perjalanan Lebih Praktis</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              Tanyakan opsi sewa dengan pengemudi untuk membantu perjalanan Anda lebih praktis dan nyaman.
+            </p>
+          </article>
+          <article class="shadow-card p-6 text-center">
+            <i class="fa-solid fa-plane-departure text-4xl text-gray-600"></i>
+            <h3 class="mt-4 text-lg font-bold">Untuk Berbagai Kebutuhan</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              Cocok untuk perjalanan bisnis, wisata, acara keluarga, antar-jemput bandara, dan kebutuhan lainnya.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Fleet Catalog & Filter -->
+      <section id="armada" class="bg-gray-50 py-16 md:py-20">
+        <div class="mx-auto max-w-7xl px-5 md:px-8">
+          <!-- Heading -->
+          <div class="mx-auto mb-8 max-w-2xl text-center">
+            <span class="text-sm font-bold uppercase tracking-widest text-gray-600"> Armada Kami </span>
+            <h2 class="mt-2 text-3xl font-extrabold text-gray-900 md:text-4xl">Temukan Mobil Rental Anda</h2>
+            <p class="mt-3 text-sm leading-6 text-gray-600 md:text-base">
+              Jelajahi pilihan mobil untuk kebutuhan harian, perjalanan luar kota, acara khusus, maupun perjalanan
+              bersama rombongan. Pilih kategori armada dan tanyakan ketersediaannya melalui WhatsApp.
+            </p>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div class="mb-10 flex flex-wrap justify-center gap-2 sm:gap-3" role="group" aria-label="Filter kategori armada">
+            <button type="button"
+              data-filter="all"
+              class="fleet-filter rounded-full bg-gray-600 px-5 py-2.5 text-sm font-semibold text-white rentcarition hover:bg-gray-700"
+            >
+              Semua Armada
+            </button>
+
+            <button type="button"
+              data-filter="mewah"
+              class="fleet-filter rounded-full border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 rentcarition hover:border-gray-600 hover:text-gray-600"
+            >
+              Mewah
+            </button>
+
+            <button type="button"
+              data-filter="reguler"
+              class="fleet-filter rounded-full border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 rentcarition hover:border-gray-600 hover:text-gray-600"
+            >
+              Reguler
+            </button>
+
+            <button type="button"
+              data-filter="minibus"
+              class="fleet-filter rounded-full border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 rentcarition hover:border-gray-600 hover:text-gray-600"
+            >
+              Minibus
+            </button>
+          </div>
+
+          <!-- Fleet Grid -->
+          <!-- Fleet Grid: kartu mobil dibuat oleh JavaScript -->
+          <div id="fleetGrid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite" aria-label="Daftar mobil rental">
+            <!-- Data armada dirender dari JavaScript -->
+          </div>
+
+          <!-- Empty State -->
+          <p id="fleetEmpty" class="hidden py-10 text-center text-gray-500">Armada pada kategori ini belum tersedia.</p>
+
+          <!-- Bottom CTA -->
+          <div class="mt-10 text-center">
+            <p class="mb-4 text-sm text-gray-600">
+              Butuh bantuan memilih mobil yang tepat? Konsultasikan tujuan, jumlah penumpang, dan jadwal perjalanan
+              Anda.
+            </p>
+            <a
+              href="https://wa.me/6287701355888?text=Halo%20Indonesia%20Luxury%20RentCar,%20saya%20ingin%20konsultasi%20tentang%20layanan%20rental%20mobil."
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 rounded-lg bg-gray-600 px-6 py-3 font-semibold text-white rentcarition hover:bg-gray-700"
+            >
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              Konsultasi via WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      
+<!-- Area Layanan & Konsultasi Harga -->
+<section id="area-layanan" class="bg-white py-16 md:py-20">
+  <div class="mx-auto max-w-7xl px-5 md:px-8">
+
+    <!-- Heading -->
+    <div class="mx-auto mb-10 max-w-3xl text-center">
+      <span class="text-sm font-bold uppercase tracking-widest text-gray-500">
+        Area Layanan Kami
+      </span>
+
+      <h2 class="mt-3 text-3xl font-extrabold text-gray-900 md:text-4xl">
+        Rental Mobil di Berbagai Kota Indonesia
+      </h2>
+
+      <p class="mt-4 text-sm leading-7 text-gray-600 md:text-base">
+        Indonesia Luxury RentCar melayani kebutuhan rental mobil
+        untuk perjalanan bisnis, wisata, acara khusus, dan perjalanan
+        keluarga di berbagai kota di Indonesia.
+      </p>
+    </div>
+
+    <!-- Daftar Kota -->
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Yogyakarta</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Solo</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Semarang</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Jakarta</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Bandung</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Surabaya</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Banyuwangi</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Bali</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Lombok / Mandalika</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Medan</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Padang</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Palembang</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Lampung</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Pontianak</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Banjarmasin</span>
+      </div>
+
+      <div class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 transition hover:border-gray-400 hover:shadow-md">
+        <i class="fa-solid fa-location-dot text-lg text-gray-500"></i>
+        <span class="text-sm font-semibold text-gray-800">Balikpapan</span>
+      </div>
+
+    </div>
+
+    <!-- Konsultasi Harga -->
+    <div class="mt-10 overflow-hidden rounded-2xl bg-gray-900 px-6 py-9 text-center text-white shadow-lg md:px-12 md:py-12">
+
+      <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white/10">
+        <i class="fa-solid fa-tags text-2xl"></i>
+      </div>
+
+      <h3 class="mt-5 text-2xl font-bold md:text-3xl">
+        Butuh Informasi Harga Rental Mobil?
+      </h3>
+
+      <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-gray-300 md:text-base">
+        Harga rental disesuaikan dengan kota tujuan, jenis kendaraan,
+        durasi sewa, dan kebutuhan perjalanan Anda.
+        Hubungi tim kami untuk mendapatkan informasi harga
+        serta ketersediaan armada.
+      </p>
+
+      <a
+        href="https://wa.me/6287701355888?text=Halo%20Indonesia%20Luxury%20RentCar%2C%20saya%20ingin%20menanyakan%20harga%20rental%20mobil%20dan%20ketersediaan%20armada."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-7 inline-flex items-center justify-center gap-2 rounded-lg bg-gray-500 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-gray-600"
+      >
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        KONSULTASI HARGA VIA WHATSAPP
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+      <!-- Partnership and payment -->
+      <section class="mx-auto max-w-6xl px-4 py-8 sm:px-6 md:px-8 md:py-12">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+          <!-- Kerja Sama / Investor -->
+          <div
+            class="flex flex-col items-center justify-center rounded-2xl bg-gray-800 px-6 py-10 text-center text-white shadow-lg sm:px-8 md:py-12"
+          >
+            <span class="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-white/10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="h-7 w-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15M19.5 4.5h-15v15h15v-15Z"
+                />
+              </svg>
+            </span>
+
+            <h2 class="text-xl font-bold leading-snug sm:text-2xl">Menerima Investor dan Kerja Sama</h2>
+
+            <p class="mt-3 max-w-sm text-sm leading-relaxed text-white/80 sm:text-base">
+              Terbuka untuk kolaborasi, kemitraan, dan peluang investasi bersama Indonesia Luxury RentCar.
+            </p>
+
+            <a
+              href="https://wa.me/6287701355888?text=Halo%20Indonesia%20Luxury%20RentCar,%20saya%20tertarik%20untuk%20membahas%20kerjasama%20atau%20investasi."
+              target="_blank"
+              rel="noopener noreferrer"
+              data-booking="Kerjasama / Investor"
+              class="mt-7 inline-flex w-full max-w-xs items-center justify-center gap-2 rounded-lg bg-black px-6 py-3.5 text-sm font-bold tracking-wider text-white transition duration-300 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#1d5963]"
+            >
+              HUBUNGI KAMI
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.8"
+                class="h-4 w-4"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Rekening Pembayaran -->
+          <div
+            class="flex flex-col justify-center rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 md:p-10"
+          >
+            <div class="text-center">
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-600">Informasi Pembayaran</p>
+
+              <h2 class="mt-2 text-xl font-bold text-slate-800 sm:text-2xl">Rekening Pembayaran</h2>
+
+              <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-gray-600"></div>
+            </div>
+
+            <div class="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5 sm:p-6">
+              <div class="flex flex-col items-center gap-5 sm:flex-row sm:items-center sm:justify-between">
+                <div class="flex h-16 w-full items-center justify-center rounded-lg bg-white p-3 sm:h-14 sm:w-36">
+                  <img
+                    src="img/logo-mandiri.webp"
+                    alt="Logo Bank Mandiri"
+                    class="max-h-10 max-w-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="min-w-0 flex-1 text-center sm:text-right">
+                  <p class="text-xs font-medium text-slate-500">Nomor Rekening</p>
+
+                  <p class="mt-1 break-all text-xl font-extrabold tracking-wide text-slate-800 sm:text-2xl">
+                    1410025805078
+                  </p>
+
+                  <p class="mt-2 text-sm text-slate-600">
+                    A/N
+                    <span class="font-bold text-slate-800">ADITYA BAGUS MARENDRA</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-neutral-200 px-5 py-10 text-sm text-slate-700">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="mb-3 font-bold">Marketing Office</h2>
+        <p>Jl. H. Syukur VII No.6 Sedati Gede, Kec. Sedati, Kabupaten Sidoarjo Jawa Timur 61256, Indonesia.</p>
+        <p class="mt-1">
+          No. Telp / WA:
+          <a
+            href="https://wa.me/6287701355888?text=Halo%20Indonesia%20Luxury%20RentCar,%20saya%20ingin%20bertanya%20tentang%20layanan%20rental%20mobil."
+            class="font-semibold hover:text-gray-600"
+            target="_blank" rel="noopener noreferrer"
+            >087701355888</a
+          >
+          /
+          <a
+            href="https://wa.me/6283123114888?text=Halo%20Indonesia%20Luxury%20RentCar,%20saya%20ingin%20bertanya%20tentang%20layanan%20rental%20mobil."
+            class="font-semibold hover:text-gray-600"
+            target="_blank" rel="noopener noreferrer"
+            >083123114888</a
+          >
+        </p>
+        <p class="mt-1">Email: indonesialuxuryrentcar@gmail.com</p>
+        <p class="mt-1">Web: www.indonesialuxuryrentcar.com</p>
+        <p class="mt-1 leading-6">
+          KAMI JUGA HADIR DI KOTA JOGYA, SOLO SEMARANG, JAKARTA BANDUNG ,SURABAYA BANYUWANGI ,BALI, LOMBOK MANDALIKA, MEDAN, PADANG PALEMBANG, LAMPUNG , PONTIANAK , BANJARMASIN , BALIKPAPAN
+        </p>
+      </div>
+    </footer>
+
+    <div class="border-t border-white bg-white py-4 text-center text-slate-700">
+      <div class="mb-3 flex justify-center gap-5 text-lg">
+        <a href="https://www.facebook.com/bagoes.rend" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-gray-600"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.tiktok.com/@indonesialuxurytrans1980?_r=1&_t=ZS-9Ahg2LC3nz0"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="TikTok"
+          class="hover:text-gray-600"
+          ><i class="fa-brands fa-tiktok"></i
+        ></a>
+        <a href="mailto:indonesialuxuryrentcar@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" class="hover:text-gray-600"
+          ><i class="fa-regular fa-envelope"></i
+        ></a>
+        <a
+          href="https://wa.me/6287701355888?text=Halo%20Indonesia%20Luxury%20RentCar,%20saya%20ingin%20bertanya%20tentang%20layanan%20rental%20mobil."
+          target="_blank" rel="noopener noreferrer"
+          aria-label="WhatsApp"
+          class="hover:text-gray-600"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+      </div>
+      <p class="text-xs">© <span id="year"></span> Indonesia Luxury RentCar. All rights reserved.</p>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div
+      id="imageLightbox"
+      class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Pratinjau gambar armada"
+    >
+      <!-- Tombol tutup -->
+      <button
+        id="closeLightbox"
+        type="button"
+        class="absolute right-5 top-5 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-3xl text-white rentcarition hover:bg-white/20"
+        aria-label="Tutup gambar"
+      >
+        &times;
+      </button>
+
+      <!-- Gambar besar -->
+      <img id="lightboxImage" src="" alt="" class="max-h-[85vh] max-w-full rounded-lg object-contain shadow-2xl" />
+
+      <!-- Nama mobil -->
+      <p id="lightboxCaption" class="absolute bottom-5 left-4 right-4 text-center text-sm font-medium text-white"></p>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a
+      id="whatsappFloat"
+      href="https://wa.me/6287701355888?text=Halo%20Indonesia%20Luxury%20RentCar,%20saya%20ingin%20bertanya%20tentang%20layanan%20rental%20mobil."
+      target="_blank"
+      rel="noopener"
+      class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-3xl text-white shadow-xl rentcarition hover:scale-105 hover:bg-green-600"
+      aria-label="Chat WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/data-armada-new.js"></script>
+
+    <script src="js/script-new.js"></script>
+  </body>
+</html>
